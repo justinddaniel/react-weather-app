@@ -7,7 +7,9 @@ const ROOT_URL = 'insert root url to api you will call'; // 'http://api.openweat
 
 export const FETCH_WEATHER = 'FETCH_WEATHER'; // use variable to keep types consistent between files that can be referenced later.
 
-export function fetchWeather() {
+export function fetchWeather(city) {
+  const url = `${ROOT_URL}&q=${city},us`;
+  
   return {
     type: FETCH_WEATHER
   };
