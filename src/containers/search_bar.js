@@ -5,19 +5,22 @@ export default class SearchBar extends Component {
     super(props);
 
     this.state = { term: ''};
+
+    this.onInputChange = this.onInputChange.bind(this);
   }
 
   onInputChange(event) {
     console.log(event.target.value);
+    this.setState({ term: event.target.value});
   }
   render() {
     return (
       <form className="input-group">
         <input
-          placehoder="Get a five day forecast in your favorite citiees"
+          placeholder="Get a five day forecast in your favorite citiees"
           className="form-control"
           value={this.state.term}
-          onChange={this.onInputChange}
+          onChange={this.onInputChange} //callback function will have wrong context of 'this' if taken onInputChange(event)
         />
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">Submit</button>
