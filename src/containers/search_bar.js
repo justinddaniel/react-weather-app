@@ -28,7 +28,7 @@ class SearchBar extends Component {
     return (
       <form onSubmit={this.onFormSubmit} className="input-group"> // although we are not submitting the form in browser, we are getting some functionality such as a searchbar input.
         <input
-          placeholder="Get a five day forecast in your favorite citiees"
+          placeholder="Get a five day forecast in your favorite cities"
           className="form-control"
           value={this.state.term}
           onChange={this.onInputChange} //callback function will have wrong context of 'this' if taken onInputChange(event)
