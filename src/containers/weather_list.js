@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-export default class WeatherList extends Component {
+class WeatherList extends Component { // export default is done down below when exporting the connect of mapStateToProps and WeatherList
   render() {
     return (
         <table className="table table-hover">
@@ -20,7 +20,7 @@ export default class WeatherList extends Component {
   }
 }
 
-function mapStateToProps({ weather }) {
+function mapStateToProps({ weather }) { //pull off weather property from state; e.g. state.weather; const weather = state.weather
   return { weather }; // { weather } === { weather: weather }
 }
 
@@ -29,3 +29,5 @@ function mapStateToProps({ weather }) {
 }
 
 */
+
+export default connect(mapStateToProps)(WeatherList);
