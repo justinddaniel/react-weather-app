@@ -31,9 +31,9 @@ class WeatherList extends Component { // export default is done down below when 
           <thead>
             <tr>
               <th>City</th>
-              <th>Temperature</th>
-              <th>Pressure</th>
-              <th>Humidity</th>
+              <th>Temperature (K)</th>
+              <th>Pressure (hPa)</th>
+              <th>Humidity (%)</th>
             </thead>
           <tbody>
             { this.props.weather.map(this.renderWeather)}
