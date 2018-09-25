@@ -17,9 +17,9 @@ class WeatherList extends Component { // export default is done down below when 
       <tr key={name}>
         <td>{name}</td>
         <td>
-          <Chart data={temps} color="orange" />
-          <Chart data={pressures} color="blue" />
-          <Chart data={humidities} color="black" />
+          <Chart data={temps} color="orange" units ="K"/>
+          <Chart data={pressures} color="blue" units="hPa" />
+          <Chart data={humidities} color="black" units="%" />
         </td>
       </tr>
     )
