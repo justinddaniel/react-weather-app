@@ -9,6 +9,8 @@ class WeatherList extends Component { // export default is done down below when 
     const name = cityData.city.name; // structure of this determined by api data returned.
 
     const temps = cityData.list.map(weather => weather.main.temp);
+    const pressures = cityData.list.map(weather => weather.main.pressure);
+    const humidities = cityData.list.map(weather => weather.main.humidity);
 
 
     return (
@@ -16,6 +18,8 @@ class WeatherList extends Component { // export default is done down below when 
         <td>{name}</td>
         <td>
           <Chart data={temps} color="orange" />
+          <Chart data={pressures} color="blue" />
+          <Chart data={humidities} color="black" />
         </td>
       </tr>
     )
